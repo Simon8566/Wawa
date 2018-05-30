@@ -272,10 +272,10 @@ cat << EOF
     { "low_power_mode" : 2, "no_prefetch" : true, "affine_to_cpu" : 13 },
     { "low_power_mode" : 2, "no_prefetch" : true, "affine_to_cpu" : 14 },
     { "low_power_mode" : 2, "no_prefetch" : true, "affine_to_cpu" : 15 },
-	{ "low_power_mode" : 2, "no_prefetch" : true, "affine_to_cpu" : 16 },
+    { "low_power_mode" : 2, "no_prefetch" : true, "affine_to_cpu" : 16 },
     { "low_power_mode" : 2, "no_prefetch" : true, "affine_to_cpu" : 17 },
     { "low_power_mode" : 3, "no_prefetch" : true, "affine_to_cpu" : 18 },
-	{ "low_power_mode" : 2, "no_prefetch" : true, "affine_to_cpu" : 19 },
+    { "low_power_mode" : 2, "no_prefetch" : true, "affine_to_cpu" : 19 },
     
 ],
 
