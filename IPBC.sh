@@ -14,7 +14,7 @@ echo '* soft memlock 262144' >> /etc/security/limits.conf
 echo '* hard memlock 262144' >> /etc/security/limits.conf
 #xmrstak
 cd /root
-git clone https://github.com/ipbc-dev/ipbc-miner.git
+git clone https://github.com/ipbc-dev/bittube-miner.git
 mkdir ipbc-miner/build
 cd /root/ipbc-miner/xmrstak
 sed -i 's/= 2.0/= 0.0/g' donate-level.hpp
