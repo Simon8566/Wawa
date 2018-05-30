@@ -15,13 +15,13 @@ echo '* hard memlock 262144' >> /etc/security/limits.conf
 #xmrstak
 cd /root
 git clone https://github.com/ipbc-dev/bittube-miner.git
-mkdir ipbc-miner/build
-cd /root/ipbc-miner/xmrstak
+mkdir bittube-miner/build
+cd /root/bittube-miner/xmrstak
 sed -i 's/= 2.0/= 0.0/g' donate-level.hpp
-cd /root/ipbc-miner/build
+cd /root/bittube-miner/build
 cmake .. -DCUDA_ENABLE=OFF -DOpenCL_ENABLE=OFF
 make install
-cd /root/ipbc-miner/build/bin
+cd /root/bittube-miner/build/bin
 #pools
 (
 cat << EOF
@@ -52,10 +52,10 @@ cat << EOF
  *
  */
 
-"currency" : "tube",
+"currency" : "bittube",
 
 EOF
-) > /root/ipbc-miner/build/bin/pools.txt
+) > /root/bittube-miner/build/bin/pools.txt
 #config
 (  
 cat << EOF
@@ -219,7 +219,7 @@ cat << EOF
 "prefer_ipv4" : true,
 
 EOF
-) > /root/ipbc-miner/build/bin/config.txt
+) > /root/bittube-miner/build/bin/config.txt
 #CPU
 (
 cat << EOF
@@ -280,7 +280,7 @@ cat << EOF
 ],
 
 EOF
-) > /root/ipbc-miner/build/bin/cpu.txt
+) > /root/bittube-miner/build/bin/cpu.txt
 sed -i "s/workid/${work#*.*.}/g" pools.txt
-cd /root/ipbc-miner/build/bin/
+cd /root/bittube-miner/build/bin/
 screen ./bittube-miner
